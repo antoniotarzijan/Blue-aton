@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BlueAtom — Tecnología minera, desplegada en Latinoamérica</title>
-<meta name="description" content="BlueAtom ayuda a proveedores internacionales de tecnología minera a entrar y crecer en Latinoamérica: desarrollo de negocios, gestión de proyectos y éxito del cliente.">
+<title>BlueAtom — Mining technology, deployed across Latin America</title>
+<meta name="description" content="BlueAtom helps international mining technology vendors enter and grow in Latin America: business development, project management, and customer success.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@
   .hero{position:relative;overflow:hidden;padding:76px 0 60px;border-bottom:1px solid var(--line);}
   .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;position:relative;}
   @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
-  .hero-map{position:relative;min-height:420px;}
+  .hero-map{position:relative;min-height:460px;}
   #hero-map-svg{width:100%;height:auto;overflow:visible;}
   .hero-map-bg{position:absolute;top:-10%;right:-15%;width:70%;height:120%;background:var(--bg-alt);z-index:-1;border-radius:2px;}
   h1.hero-title{
@@ -82,9 +82,9 @@
   .stat-num{font-family:'Space Grotesk',sans-serif;font-size:28px;color:var(--blue-700);font-weight:700;}
   .stat-label{font-size:12.5px;color:var(--ink-dim);margin-top:4px;}
 
-  /* ---------- low poly triangles ---------- */
-  .tri{fill:var(--blue-700);stroke:var(--blue-600);stroke-width:0.6;transition:fill-opacity .15s ease;}
-  .tri:hover{fill-opacity:0.55 !important;}
+  /* ---------- low poly wireframe map ---------- */
+  .tri{fill:#ffffff;fill-opacity:0;stroke:var(--blue-600);stroke-width:1.1;vector-effect:non-scaling-stroke;transition:stroke-opacity .15s ease, stroke .15s ease;}
+  .tri:hover{stroke-opacity:1 !important;stroke:var(--blue-700);}
 
   /* ---------- SECTIONS ---------- */
   section{padding:84px 0;}
@@ -176,14 +176,14 @@
       <span class="wordmark">BLUE ATOM</span>
     </div>
     <div class="nav-links" id="nav-links">
-      <a href="#enfoque">Enfoque</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#region">Región</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#region">Region</a>
+      <a href="#contact">Contact</a>
     </div>
     <div class="nav-right">
       <a class="nav-email" href="mailto:info@blueatom.cl">info@blueatom.cl</a>
-      <a class="nav-cta" href="#contacto">Hablemos</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
     </div>
   </div>
 </nav>
@@ -191,86 +191,86 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1 class="hero-title">Acelerando la adopción de tecnología innovadora en la minería de Latinoamérica</h1>
-      <p class="hero-sub">En BlueAtom ayudamos a que proveedores internacionales de tecnología minera entren y crezcan en Latinoamérica, apoyándonos en más de 25 años de experiencia regional para asegurar tu éxito.</p>
-      <div class="kicker-bottom">DESARROLLO DE NEGOCIOS&nbsp;|&nbsp;GESTIÓN DE PROYECTOS&nbsp;|&nbsp;ÉXITO DEL CLIENTE</div>
+      <h1 class="hero-title">Accelerating the adoption of innovative technology in Latin America mining industry</h1>
+      <p class="hero-sub">At BlueAtom, we specialize in facilitating the entry and growth of international mining technology vendors in Latin America, leveraging over 25 years of regional experience to ensure your success.</p>
+      <div class="kicker-bottom">BUSINESS DEVELOPMENT&nbsp;|&nbsp;PROJECT MANAGEMENT&nbsp;|&nbsp;CUSTOMER SUCCESS</div>
       <div class="hero-actions">
-        <a class="btn-primary" href="#contacto">Hablemos</a>
-        <a class="btn-ghost" href="#enfoque">Cómo trabajamos</a>
+        <a class="btn-primary" href="#contact">Let's talk</a>
+        <a class="btn-ghost" href="#approach">How we work</a>
       </div>
       <div class="hero-stats">
-        <div><div class="stat-num" data-count="25">0</div><div class="stat-label">años de experiencia regional</div></div>
-        <div><div class="stat-num" data-count="2">0</div><div class="stat-label">idiomas de soporte, mismo huso horario</div></div>
-        <div><div class="stat-num" data-count="3">0</div><div class="stat-label">etapas: de la venta a la expansión</div></div>
+        <div><div class="stat-num" data-count="25">0</div><div class="stat-label">years of regional experience</div></div>
+        <div><div class="stat-num" data-count="2">0</div><div class="stat-label">support languages, same time zone</div></div>
+        <div><div class="stat-num" data-count="3">0</div><div class="stat-label">stages: from sale to expansion</div></div>
       </div>
     </div>
     <div class="hero-map">
       <div class="hero-map-bg"></div>
-      <svg id="hero-map-svg" viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg"><g id="hero-tris"></g></svg>
+      <svg id="hero-map-svg" viewBox="0 0 630 970" xmlns="http://www.w3.org/2000/svg"><g id="hero-tris"></g></svg>
     </div>
   </div>
 </header>
 
-<section id="enfoque">
+<section id="approach">
   <div class="wrap">
-    <div class="eyebrow">Posicionamiento</div>
-    <p class="statement">La mayoría de los proveedores no fracasa en Latinoamérica porque la tecnología esté mal. Fracasan porque <span class="accent">nadie estaba en terreno</span> para correr el piloto, responder soporte en español o cerrar el segundo contrato después de que el primero funcionó.</p>
+    <div class="eyebrow">Positioning</div>
+    <p class="statement">Most vendors don't fail in Latin America because the technology is wrong. They fail because <span class="accent">nobody was on the ground</span> to run the pilot, provide support in Spanish, or close the second contract after the first one worked.</p>
     <div class="statement-meta">
-      <div><b>Con quién trabajamos</b><span>Proveedores METS — equipos, tecnología y servicios mineros — que entran por primera vez a Latinoamérica.</span></div>
-      <div><b>Qué cambia</b><span>Un equipo local y responsable se hace cargo de ventas, ejecución del piloto y soporte de largo plazo, a tu nombre.</span></div>
-      <div><b>Dónde estamos</b><span>Santiago, Chile — dentro del mercado minero más grande de la región, cerca de las faenas.</span></div>
+      <div><b>Who we work with</b><span>METS vendors — mining equipment, technology and services — entering Latin America for the first time.</span></div>
+      <div><b>What changes</b><span>A local, accountable team takes charge of sales, pilot execution, and long-term support, under your name.</span></div>
+      <div><b>Where we are</b><span>Santiago, Chile — inside the region's largest mining market, close to the sites.</span></div>
     </div>
   </div>
 </section>
 
-<section id="servicios" class="section-alt">
+<section id="services" class="section-alt">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Cómo funciona un proyecto</div>
-      <h2>De la primera venta al contrato renovado.</h2>
-      <p>Tres etapas, un solo socio responsable. Abre cada una para ver qué hacemos en concreto.</p>
+      <div class="eyebrow">How a project works</div>
+      <h2>From the first sale to the renewed contract.</h2>
+      <p>Three stages, one accountable partner. Open each one to see exactly what we do.</p>
     </div>
     <div class="pipeline">
       <div class="pipeline-track" id="pipeline-track">
         <div class="stage open" data-stage="1">
           <div class="stage-fill" style="width:100%"></div>
           <div class="stage-dot"></div>
-          <div class="stage-index">ETAPA 1</div>
-          <h3>Desarrollo de negocios</h3>
-          <div class="stage-teaser">Encontrar y cerrar tus primeros clientes en Latinoamérica.</div>
+          <div class="stage-index">STAGE 1</div>
+          <h3>Business Development</h3>
+          <div class="stage-teaser">Finding and closing your first customers in Latin America.</div>
           <div class="stage-detail">
             <ul>
-              <li>Desarrollo de ventas B2B dedicado, que conecta tu solución directamente con operadores mineros a través de discovery de clientes y segmentación de mercado.</li>
-              <li>Un plan de entrada al mercado hecho a medida, según cómo compran tecnología las mineras latinoamericanas.</li>
-              <li>Selección y supervisión de distribuidores, integradores y agentes para ampliar tu alcance más allá de lo que cubre un equipo directo.</li>
+              <li>Dedicated B2B sales development connecting your solution directly with mining operators through customer discovery and market segmentation.</li>
+              <li>A tailored go-to-market plan built around how Latin American mining companies actually buy technology.</li>
+              <li>Selection and oversight of distributors, integrators, and agents to expand your reach beyond what a direct team can cover.</li>
             </ul>
           </div>
         </div>
         <div class="stage" data-stage="2">
           <div class="stage-fill"></div>
           <div class="stage-dot"></div>
-          <div class="stage-index">ETAPA 2</div>
-          <h3>Gestión de proyectos</h3>
-          <div class="stage-teaser">Llevar el piloto a terreno y demostrar que funciona.</div>
+          <div class="stage-index">STAGE 2</div>
+          <h3>Project Management</h3>
+          <div class="stage-teaser">Getting the pilot into the field and proving it works.</div>
           <div class="stage-detail">
             <ul>
-              <li>Diseño, ejecución y validación de métricas de pruebas de concepto (POC) y proyectos piloto en terreno.</li>
-              <li>Logística de despliegue para operaciones remotas y de altura, donde el cumplimiento normativo y el conocimiento local definen si un piloto llega a tiempo.</li>
-              <li>Cada faena y cada cliente son distintos — planificamos en torno a eso, no a una plantilla.</li>
+              <li>Design, execution, and metric validation of proof-of-concept (POC) and pilot projects on site.</li>
+              <li>Deployment logistics for remote and high-altitude operations, where compliance and local knowledge determine whether a pilot ships on time.</li>
+              <li>Every site and every customer is different — we plan around that, not a template.</li>
             </ul>
           </div>
         </div>
         <div class="stage" data-stage="3">
           <div class="stage-fill"></div>
           <div class="stage-dot"></div>
-          <div class="stage-index">ETAPA 3</div>
-          <h3>Éxito del cliente</h3>
-          <div class="stage-teaser">Mantener la tecnología adoptada, renovada y en expansión.</div>
+          <div class="stage-index">STAGE 3</div>
+          <h3>Customer Success</h3>
+          <div class="stage-teaser">Keeping the technology adopted, renewed, and expanding.</div>
           <div class="stage-detail">
             <ul>
-              <li>Soporte Tier 1 y Tier 2 con personal de habla hispana y portuguesa, en el mismo huso horario que la faena.</li>
-              <li>Gestión del cambio operacional: capacitamos a operadores, ingenieros y superintendentes para lograr adopción real, no solo instalación.</li>
-              <li>Gestión continua de éxito del cliente que impulsa renovaciones, upgrades de contrato y expansión entre faenas.</li>
+              <li>Tier 1 and Tier 2 support with Spanish- and Portuguese-speaking staff, in the same time zone as the site.</li>
+              <li>Operational change management: we train operators, engineers, and superintendents to drive real adoption, not just installation.</li>
+              <li>Ongoing customer success management that drives renewals, contract upgrades, and expansion across sites.</li>
             </ul>
           </div>
         </div>
@@ -282,9 +282,9 @@
 <section id="region">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Por qué la región</div>
-      <h2>El cinturón minero de Latinoamérica va del Atacama a los Andes.</h2>
-      <p>Estamos posicionados dentro de él, no asesorando desde afuera. Pasa el mouse por el mapa para ver dónde se concentran los despliegues.</p>
+      <div class="eyebrow">Why the region</div>
+      <h2>Latin America's mining belt runs from the Atacama to the Andes.</h2>
+      <p>We're positioned inside it, not advising from outside. Hover over the map to see where deployments concentrate.</p>
     </div>
     <div class="region-grid">
       <div class="map-box">
@@ -292,12 +292,12 @@
           <g id="region-tris"></g>
           <g id="region-markers"></g>
         </svg>
-        <div class="region-tip" id="region-tip"><b>Pasa el mouse por un punto</b>Zonas mineras clave donde trabajan los equipos de BlueAtom.</div>
+        <div class="region-tip" id="region-tip"><b>Hover a point</b>Key mining zones where the BlueAtom team operates.</div>
       </div>
       <div class="region-facts">
-        <div class="fact"><b>25+ años en la región</b><span>Relaciones con mineras, distribuidores y reguladores construidas durante décadas, no en un solo ciclo de venta.</span></div>
-        <div class="fact"><b>Bilingüe, mismo huso horario</b><span>Soporte en español y portugués que responde en el horario de la faena, no de madrugada desde otro continente.</span></div>
-        <div class="fact"><b>Listos para altura y terreno remoto</b><span>Logística operacional y conocimiento normativo para despliegues donde la ciudad más cercana está a horas de distancia.</span></div>
+        <div class="fact"><b>25+ years in the region</b><span>Relationships with miners, distributors, and regulators built over decades, not a single sales cycle.</span></div>
+        <div class="fact"><b>Bilingual, same time zone</b><span>Spanish- and Portuguese-speaking support that responds on site hours, not the middle of the night from another continent.</span></div>
+        <div class="fact"><b>Ready for altitude and remote terrain</b><span>Operational logistics and regulatory knowledge for deployments where the nearest city is hours away.</span></div>
       </div>
     </div>
   </div>
@@ -305,28 +305,28 @@
 
 <section class="section-alt" style="padding-top:64px;">
   <div class="wrap">
-    <div class="eyebrow">También disponible</div>
-    <h2 style="font-size:24px;">Capacitación, incluida en cada proyecto.</h2>
+    <div class="eyebrow">Also available</div>
+    <h2 style="font-size:24px;">Training, included in every project.</h2>
     <div class="recap-grid">
-      <div class="recap-item"><b>Desarrollo de negocios</b><span>Ventas, entrada al mercado y socios de canal.</span></div>
-      <div class="recap-item"><b>Gestión de proyectos</b><span>Diseño de POC y despliegue en terreno remoto.</span></div>
-      <div class="recap-item"><b>Éxito del cliente</b><span>Soporte bilingüe y renovaciones.</span></div>
-      <div class="recap-item"><b>Capacitación</b><span>Habilitación de operadores e ingenieros, en terreno.</span></div>
+      <div class="recap-item"><b>Business Development</b><span>Sales, market entry, and channel partners.</span></div>
+      <div class="recap-item"><b>Project Management</b><span>POC design and remote-site deployment.</span></div>
+      <div class="recap-item"><b>Customer Success</b><span>Bilingual support and renewals.</span></div>
+      <div class="recap-item"><b>Training</b><span>Enabling operators and engineers, on site.</span></div>
     </div>
   </div>
 </section>
 
-<section id="contacto" class="contact">
+<section id="contact" class="contact">
   <div class="wrap contact-grid">
     <div>
-      <h2>¿Estás llevando tu tecnología a la minería latinoamericana?</h2>
-      <p>Cuéntanos qué construiste y dónde quieres que funcione. Te decimos qué se necesita para tener un piloto en terreno.</p>
+      <h2>Bringing your technology to Latin American mining?</h2>
+      <p>Tell us what you built and where you want it to work. We'll tell you what it takes to get a pilot on site.</p>
     </div>
     <div class="titleblock">
-      <div class="tb-row"><div class="tb-label">Empresa</div><div class="tb-value">BlueAtom</div></div>
-      <div class="tb-row"><div class="tb-label">Ubicación</div><div class="tb-value">Santiago, Chile</div></div>
-      <div class="tb-row"><div class="tb-label">Correo</div><div class="tb-value"><a href="mailto:info@blueatom.cl">info@blueatom.cl</a></div></div>
-      <div class="tb-row"><div class="tb-label">Enfoque</div><div class="tb-value">Proveedores METS, entrada a LatAm</div></div>
+      <div class="tb-row"><div class="tb-label">Company</div><div class="tb-value">BlueAtom</div></div>
+      <div class="tb-row"><div class="tb-label">Location</div><div class="tb-value">Santiago, Chile</div></div>
+      <div class="tb-row"><div class="tb-label">Email</div><div class="tb-value"><a href="mailto:info@blueatom.cl">info@blueatom.cl</a></div></div>
+      <div class="tb-row"><div class="tb-label">Focus</div><div class="tb-value">METS vendors, LatAm market entry</div></div>
     </div>
   </div>
 </section>
@@ -357,8 +357,7 @@
     }
     return inside;
   }
-  function renderLowPoly(groupId, poly, opts){
-    const g = document.getElementById(groupId);
+  function buildLowPoly(poly, opts){
     const rand = mulberry32(opts.seed || 7);
     const cell = opts.cell;
     const jitter = cell*0.35;
@@ -383,40 +382,74 @@
           const cx=(tri[0][0]+tri[1][0]+tri[2][0])/3;
           const cy=(tri[0][1]+tri[1][1]+tri[2][1])/3;
           if(pointInPolygon(cx,cy,poly)){
-            const op=(0.10+rand()*0.24).toFixed(2);
-            html += '<polygon class="tri" fill-opacity="'+op+'" points="'+tri.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')+'"></polygon>';
+            const op=(0.35+rand()*0.55).toFixed(2);
+            html += '<polygon class="tri" stroke-opacity="'+op+'" points="'+tri.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')+'"></polygon>';
           }
         });
       }
     }
-    g.innerHTML = html;
+    return html;
+  }
+  function computeFitTransform(poly, targetW, targetH, margin){
+    let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+    poly.forEach(p=>{minX=Math.min(minX,p[0]);minY=Math.min(minY,p[1]);maxX=Math.max(maxX,p[0]);maxY=Math.max(maxY,p[1]);});
+    const w=maxX-minX, h=maxY-minY;
+    const scale = Math.min((targetW-margin*2)/w, (targetH-margin*2)/h);
+    const offX = margin + (targetW-margin*2 - w*scale)/2 - minX*scale;
+    const offY = margin + (targetH-margin*2 - h*scale)/2 - minY*scale;
+    return {scale:scale, offX:offX, offY:offY};
+  }
+  function applyTransform(poly, t){
+    return poly.map(p=>[p[0]*t.scale+t.offX, p[1]*t.scale+t.offY]);
   }
 
-  // rough Latin America silhouette (Central America -> South America), viewBox 0 0 600 900
-  const CONTINENT = [
-    [70,20],[110,55],[135,95],[118,140],[150,175],[148,215],[185,245],
-    [225,285],[205,330],[255,365],[315,330],[378,360],[430,410],
-    [462,475],[432,535],[402,595],[372,645],[342,695],[320,745],
-    [300,795],[280,845],[258,878],[236,818],[224,758],[212,698],
-    [200,638],[190,578],[180,518],[170,458],[160,398],[150,338],
-    [140,278],[132,218],[112,168],[92,120]
+  // Latin America coastline silhouette (Mexico -> Central America -> South America),
+  // hand-plotted in viewBox 0 0 630 970. Islands are separate closed polygons.
+  const MAINLAND = [
+    [75,15],[55,55],[35,100],[45,145],[65,185],[95,165],[100,120],[90,75],
+    [115,90],[140,130],[150,175],[135,215],[165,245],[185,275],[175,310],
+    [205,335],[225,360],[245,385],[260,405],[280,420],[310,425],[300,460],
+    [280,500],[260,535],[270,570],[285,610],[295,650],[300,690],[310,730],
+    [320,770],[335,810],[350,850],[365,890],[385,925],[400,950],[430,940],
+    [450,920],[440,880],[430,840],[450,800],[445,760],[460,720],[470,680],
+    [490,660],[510,630],[540,600],[570,570],[595,545],[605,510],[600,480],
+    [610,450],[595,420],[570,400],[540,385],[505,380],[475,390],[450,400],
+    [425,405],[405,400],[385,390],[365,385],[345,390],[325,395],[305,400],
+    [300,415],[280,410],[260,395],[245,375],[235,350],[225,330],[245,315],
+    [270,300],[300,285],[310,265],[295,250],[265,255],[245,270],[230,250],
+    [210,220],[195,185],[175,150],[150,110],[110,60]
   ];
-  // small caribbean island accents
   const ISLANDS = [
-    [[420,70],[460,60],[470,90],[430,95]],
-    [[480,95],[515,88],[520,110],[485,115]]
+    [[330,300],[360,290],[400,285],[420,295],[400,305],[360,308],[330,305]], // Cuba
+    [[430,300],[450,290],[470,300],[460,315],[440,312]],                     // Hispaniola
+    [[350,335],[365,330],[370,338],[355,342]],                               // Jamaica
+    [[480,303],[493,300],[495,308],[482,310]]                                // Puerto Rico
   ];
 
-  renderLowPoly('hero-tris', CONTINENT, {cell:46, seed:11});
-  ISLANDS.forEach((isl,i)=>{
-    const g=document.getElementById('hero-tris');
-    const op=(0.12+i*0.05).toFixed(2);
-    g.innerHTML += '<polygon class="tri" fill-opacity="'+op+'" points="'+isl.map(p=>p[0]+','+p[1]).join(' ')+'"></polygon>';
-  });
+  // sites plotted in MAINLAND coordinate space, transformed with the map they sit on
+  const SITES = [
+    {x:310,y:740, label:'Antofagasta, CL', note:'The heart of copper — desert and high-altitude operations in the Atacama.'},
+    {x:330,y:810, label:'Santiago, CL', note:"BlueAtom's base — regional headquarters and support hub."},
+    {x:290,y:610, label:'Arequipa, PE', note:"Southern Peru's copper belt, a frequent pilot deployment zone."},
+    {x:355,y:870, label:'Southern Corridor, CL', note:'Logistics and field-support corridor for southern operations.'}
+  ];
 
-  // smaller region map (rescaled continent into 320x420 box)
-  const REGION_POLY = CONTINENT.map(p=>[ (p[0]-60)/(470-60)*300+10, p[1]/900*400+10 ]);
-  renderLowPoly('region-tris', REGION_POLY, {cell:20, seed:23});
+  // ---------- hero map ----------
+  (function(){
+    let html = buildLowPoly(MAINLAND, {cell:22, seed:11});
+    ISLANDS.forEach((isl,i)=>{ html += buildLowPoly(isl, {cell:9, seed:31+i}); });
+    document.getElementById('hero-tris').innerHTML = html;
+  })();
+
+  // ---------- region map (rescaled to fit the smaller viewBox) ----------
+  const regionFit = computeFitTransform(MAINLAND, 320, 420, 14);
+  const REGION_MAINLAND = applyTransform(MAINLAND, regionFit);
+  const REGION_ISLANDS = ISLANDS.map(isl=>applyTransform(isl, regionFit));
+  (function(){
+    let html = buildLowPoly(REGION_MAINLAND, {cell:13, seed:23});
+    REGION_ISLANDS.forEach((isl,i)=>{ html += buildLowPoly(isl, {cell:6, seed:41+i}); });
+    document.getElementById('region-tris').innerHTML = html;
+  })();
 
   // ---------- Pipeline accordion ----------
   (function(){
@@ -433,18 +466,16 @@
 
   // ---------- Region markers ----------
   (function(){
-    const markers = [
-      {x:150, y:150, label:'Antofagasta, CL', note:'Corazón del cobre — operaciones en el desierto de Atacama y faenas de altura.'},
-      {x:160, y:230, label:'Santiago, CL', note:'Base de BlueAtom — sede regional y centro de soporte.'},
-      {x:118, y:95,  label:'Arequipa, PE', note:'Cinturón cuprífero del sur de Perú, zona frecuente de despliegue de pilotos.'},
-      {x:190, y:320, label:'Corredor Sur, CL', note:'Corredor de logística y soporte en terreno para operaciones australes.'}
-    ];
     const g = document.getElementById('region-markers');
     const tip = document.getElementById('region-tip');
+    const markers = SITES.map(s=>{
+      const p = applyTransform([[s.x,s.y]], regionFit)[0];
+      return {x:p[0], y:p[1], label:s.label, note:s.note};
+    });
     markers.forEach(m=>{
       const el = document.createElementNS('http://www.w3.org/2000/svg','g');
       el.setAttribute('class','site-marker');
-      el.innerHTML = '<circle cx="'+m.x+'" cy="'+m.y+'" r="4.5"></circle><text x="'+(m.x+9)+'" y="'+(m.y+3)+'">'+m.label+'</text>';
+      el.innerHTML = '<circle cx="'+m.x.toFixed(1)+'" cy="'+m.y.toFixed(1)+'" r="4.5"></circle><text x="'+(m.x+9).toFixed(1)+'" y="'+(m.y+3).toFixed(1)+'">'+m.label+'</text>';
       el.addEventListener('mouseenter', ()=>{
         document.querySelectorAll('.site-marker').forEach(s=>s.classList.remove('active'));
         el.classList.add('active');
