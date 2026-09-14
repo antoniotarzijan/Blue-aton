@@ -46,8 +46,8 @@
   nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   .nav-inner{max-width:var(--max);margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;}
   .logo{display:flex;align-items:center;gap:12px;}
-  .logo-mark{width:30px;height:30px;flex:none;}
-  .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:0.04em;color:var(--blue-700);}
+  .logo-mark{width:32px;height:32px;flex:none;color:var(--blue-700);}
+  .wordmark-svg{height:18px;width:auto;flex:none;color:var(--blue-700);}
   .nav-links{display:flex;gap:32px;font-size:14.5px;}
   .nav-links a{text-decoration:none;color:var(--ink-dim);padding:4px 1px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
   .nav-links a:hover,.nav-links a.active{color:var(--blue-700);border-color:var(--orange);}
@@ -166,14 +166,25 @@
 <nav>
   <div class="nav-inner">
     <div class="logo">
-      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
-        <circle cx="20" cy="20" r="16" stroke="#1d4e9b" stroke-width="2.4"/>
-        <circle cx="20" cy="4.5" r="3" fill="#1d4e9b"/>
-        <circle cx="31" cy="30" r="3" fill="#1d4e9b"/>
-        <circle cx="9" cy="30" r="3" fill="#1d4e9b"/>
-        <line x1="20" y1="20" x2="20" y2="7" stroke="#1d4e9b" stroke-width="1.6"/>
+      <svg class="logo-mark" viewBox="0 0 80 80" fill="none">
+        <path d="M14,58 A32,32 0 1 1 66,58" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        <line x1="40" y1="40" x2="40" y2="10" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="40" cy="10" r="7.5" fill="currentColor"/>
+        <circle cx="14" cy="58" r="7.5" fill="currentColor"/>
+        <circle cx="66" cy="58" r="7.5" fill="currentColor"/>
       </svg>
-      <span class="wordmark">BLUE ATOM</span>
+      <svg class="wordmark-svg" viewBox="-10 -10 585 120" xmlns="http://www.w3.org/2000/svg" aria-label="BLUE ATOM">
+        <path fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" d="
+          M10,5 V95 M10,5 H36 V48 H10 M10,50 H40 V95 H10
+          M76,5 V95 H111
+          M137,5 V85 H169 V5
+          M205,5 V95 M205,5 H240 M205,50 H233 M205,95 H240
+          M325,5 L303,95 M325,5 L347,95
+          M373,5 H418 M395.5,5 V95
+          M464,5 L487,50 L464,95 L441,50 Z
+          M510,95 V5 L535,55 L560,5 V95
+        "/>
+      </svg>
     </div>
     <div class="nav-links" id="nav-links">
       <a href="#approach">Approach</a>
