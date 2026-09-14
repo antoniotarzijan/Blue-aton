@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlueAtom — Tecnología minera, desplegada en Latinoamérica</title>
+<meta name="description" content="BlueAtom ayuda a proveedores internacionales de tecnología minera a entrar y crecer en Latinoamérica: desarrollo de negocios, gestión de proyectos y éxito del cliente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-900:#0f2c5c;
+    --blue-800:#153a75;
+    --blue-700:#1d4e9b;
+    --blue-600:#2a63bd;
+    --blue-100:#e8edf7;
+    --orange:#ee8e2a;
+    --orange-dark:#d97a1a;
+    --bg:#ffffff;
+    --bg-alt:#f3f4f8;
+    --ink:#141c28;
+    --ink-dim:#5a6472;
+    --line:#e2e5ec;
+    --line-strong:#c9cedb;
+    --max:1200px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;font-size:16px;line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;font-weight:600;line-height:1.08;margin:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  ::selection{background:var(--orange);color:#fff;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:var(--max);margin:0 auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo-mark{width:30px;height:30px;flex:none;}
+  .wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:0.04em;color:var(--blue-700);}
+  .nav-links{display:flex;gap:32px;font-size:14.5px;}
+  .nav-links a{text-decoration:none;color:var(--ink-dim);padding:4px 1px;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;}
+  .nav-links a:hover,.nav-links a.active{color:var(--blue-700);border-color:var(--orange);}
+  .nav-right{display:flex;align-items:center;gap:22px;}
+  .nav-email{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-dim);text-decoration:none;}
+  .nav-cta{font-size:14px;color:#fff;background:var(--blue-700);padding:10px 18px;text-decoration:none;font-weight:600;border-radius:3px;}
+  .nav-cta:hover{background:var(--blue-800);}
+  @media (max-width:820px){.nav-links,.nav-email{display:none;}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:76px 0 60px;border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;position:relative;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .hero-map{position:relative;min-height:420px;}
+  #hero-map-svg{width:100%;height:auto;overflow:visible;}
+  .hero-map-bg{position:absolute;top:-10%;right:-15%;width:70%;height:120%;background:var(--bg-alt);z-index:-1;border-radius:2px;}
+  h1.hero-title{
+    font-size:clamp(28px,3.6vw,44px);text-transform:uppercase;letter-spacing:0.01em;
+    color:var(--ink);max-width:14ch;
+  }
+  .hero-sub{max-width:50ch;color:var(--ink);font-weight:600;font-size:16.5px;margin-top:26px;}
+  .kicker-bottom{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(13px,1.6vw,17px);
+    color:var(--orange);letter-spacing:0.02em;margin-top:40px;display:flex;gap:10px;flex-wrap:wrap;
+  }
+  .hero-actions{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{background:var(--blue-700);color:#fff;text-decoration:none;padding:13px 24px;font-weight:600;font-size:15px;border-radius:3px;transition:background .15s ease, transform .15s ease;}
+  .btn-primary:hover{background:var(--blue-800);transform:translateY(-1px);}
+  .btn-ghost{color:var(--ink);text-decoration:none;font-size:15px;padding:13px 4px;border-bottom:1px solid var(--line-strong);}
+  .btn-ghost:hover{border-color:var(--ink);}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid var(--line);padding-top:24px;max-width:600px;gap:16px;}
+  .stat-num{font-family:'Space Grotesk',sans-serif;font-size:28px;color:var(--blue-700);font-weight:700;}
+  .stat-label{font-size:12.5px;color:var(--ink-dim);margin-top:4px;}
+
+  /* ---------- low poly triangles ---------- */
+  .tri{fill:var(--blue-700);stroke:var(--blue-600);stroke-width:0.6;transition:fill-opacity .15s ease;}
+  .tri:hover{fill-opacity:0.55 !important;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:84px 0;}
+  .section-alt{background:var(--bg-alt);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--orange-dark);margin-bottom:14px;}
+  .section-head{max-width:640px;}
+  .section-head h2{font-size:clamp(24px,3.2vw,34px);}
+  .section-head p{margin-top:16px;font-size:16px;color:var(--ink-dim);}
+
+  .statement{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(20px,2.8vw,29px);line-height:1.4;max-width:880px;color:var(--ink);}
+  .statement .accent{color:var(--orange-dark);}
+  .statement-meta{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px;}
+  .statement-meta div{max-width:230px;}
+  .statement-meta b{display:block;font-family:'Space Grotesk',sans-serif;font-size:15px;margin-bottom:4px;color:var(--blue-700);}
+  .statement-meta span{font-size:13.5px;color:var(--ink-dim);}
+
+  /* ---------- PIPELINE ---------- */
+  .pipeline{margin-top:52px;}
+  .pipeline-track{position:relative;display:flex;border-top:1px solid var(--line);}
+  .stage{flex:1;position:relative;padding:28px 26px 30px;cursor:pointer;border-right:1px solid var(--line);transition:background .2s ease;}
+  .stage:last-child{border-right:none;}
+  .stage:hover{background:rgba(29,78,155,0.035);}
+  .stage.open{background:var(--blue-100);}
+  .stage-index{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--orange-dark);}
+  .stage-dot{position:absolute;top:-6px;left:26px;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid var(--line-strong);transition:border-color .2s ease,background .2s ease;}
+  .stage.open .stage-dot{border-color:var(--blue-700);background:var(--blue-700);}
+  .stage h3{font-size:19px;margin-top:16px;color:var(--ink);}
+  .stage-teaser{font-size:14px;color:var(--ink-dim);margin-top:8px;}
+  .stage-detail{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+  .stage.open .stage-detail{max-height:340px;}
+  .stage-detail ul{margin:16px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-dim);}
+  .stage-detail li{margin-bottom:10px;}
+  .stage-fill{position:absolute;left:0;top:-1px;height:2px;background:var(--blue-700);width:0%;transition:width .5s ease;}
+  @media (max-width:820px){.pipeline-track{flex-direction:column;}.stage{border-right:none;border-bottom:1px solid var(--line);}.stage-dot{left:0;top:26px;}}
+
+  /* ---------- REGION ---------- */
+  .region-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:52px;}
+  @media (max-width:860px){.region-grid{grid-template-columns:1fr;gap:36px;}}
+  .map-box{position:relative;background:#fff;border:1px solid var(--line);padding:14px;border-radius:2px;}
+  #region-svg{width:100%;height:auto;}
+  .site-marker{cursor:pointer;}
+  .site-marker circle{fill:var(--orange);transition:r .15s ease;}
+  .site-marker:hover circle,.site-marker.active circle{r:6.5;}
+  .site-marker text{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:var(--ink-dim);transition:fill .15s ease;}
+  .site-marker:hover text,.site-marker.active text{fill:var(--ink);}
+  .region-tip{margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:2px;font-size:14px;color:var(--ink-dim);min-height:58px;}
+  .region-tip b{color:var(--ink);display:block;margin-bottom:4px;font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .region-facts{display:flex;flex-direction:column;gap:26px;}
+  .fact{border-left:2px solid var(--orange);padding-left:18px;}
+  .fact b{display:block;font-family:'Space Grotesk',sans-serif;font-size:16px;color:var(--ink);margin-bottom:4px;}
+  .fact span{font-size:14px;color:var(--ink-dim);}
+
+  /* ---------- RECAP ---------- */
+  .recap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-top:44px;border:1px solid var(--line);}
+  @media (max-width:760px){.recap-grid{grid-template-columns:repeat(2,1fr);}}
+  .recap-item{background:#fff;padding:26px 22px;}
+  .recap-item b{display:block;font-family:'Space Grotesk',sans-serif;font-size:16px;margin-bottom:8px;color:var(--blue-700);}
+  .recap-item span{font-size:13.5px;color:var(--ink-dim);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--blue-900);color:#fff;}
+  .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+  .contact h2{font-size:clamp(26px,3.6vw,38px);color:#fff;max-width:15ch;}
+  .contact p{color:#b9c6de;margin-top:18px;max-width:44ch;}
+  .titleblock{border:1px solid rgba(255,255,255,0.25);font-family:'IBM Plex Mono',monospace;font-size:13px;}
+  .tb-row{display:flex;border-bottom:1px solid rgba(255,255,255,0.18);}
+  .tb-row:last-child{border-bottom:none;}
+  .tb-label{width:120px;flex:none;padding:12px 14px;color:#8ea3c4;border-right:1px solid rgba(255,255,255,0.18);}
+  .tb-value{padding:12px 14px;color:#fff;}
+  .tb-value a{text-decoration:none;color:var(--orange);}
+
+  footer{background:#fff;border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--ink-dim);}
+  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="16" stroke="#1d4e9b" stroke-width="2.4"/>
+        <circle cx="20" cy="4.5" r="3" fill="#1d4e9b"/>
+        <circle cx="31" cy="30" r="3" fill="#1d4e9b"/>
+        <circle cx="9" cy="30" r="3" fill="#1d4e9b"/>
+        <line x1="20" y1="20" x2="20" y2="7" stroke="#1d4e9b" stroke-width="1.6"/>
+      </svg>
+      <span class="wordmark">BLUE ATOM</span>
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#enfoque">Enfoque</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#region">Región</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="nav-right">
+      <a class="nav-email" href="mailto:info@blueatom.cl">info@blueatom.cl</a>
+      <a class="nav-cta" href="#contacto">Hablemos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="hero-title">Acelerando la adopción de tecnología innovadora en la minería de Latinoamérica</h1>
+      <p class="hero-sub">En BlueAtom ayudamos a que proveedores internacionales de tecnología minera entren y crezcan en Latinoamérica, apoyándonos en más de 25 años de experiencia regional para asegurar tu éxito.</p>
+      <div class="kicker-bottom">DESARROLLO DE NEGOCIOS&nbsp;|&nbsp;GESTIÓN DE PROYECTOS&nbsp;|&nbsp;ÉXITO DEL CLIENTE</div>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contacto">Hablemos</a>
+        <a class="btn-ghost" href="#enfoque">Cómo trabajamos</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num" data-count="25">0</div><div class="stat-label">años de experiencia regional</div></div>
+        <div><div class="stat-num" data-count="2">0</div><div class="stat-label">idiomas de soporte, mismo huso horario</div></div>
+        <div><div class="stat-num" data-count="3">0</div><div class="stat-label">etapas: de la venta a la expansión</div></div>
+      </div>
+    </div>
+    <div class="hero-map">
+      <div class="hero-map-bg"></div>
+      <svg id="hero-map-svg" viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg"><g id="hero-tris"></g></svg>
+    </div>
+  </div>
+</header>
+
+<section id="enfoque">
+  <div class="wrap">
+    <div class="eyebrow">Posicionamiento</div>
+    <p class="statement">La mayoría de los proveedores no fracasa en Latinoamérica porque la tecnología esté mal. Fracasan porque <span class="accent">nadie estaba en terreno</span> para correr el piloto, responder soporte en español o cerrar el segundo contrato después de que el primero funcionó.</p>
+    <div class="statement-meta">
+      <div><b>Con quién trabajamos</b><span>Proveedores METS — equipos, tecnología y servicios mineros — que entran por primera vez a Latinoamérica.</span></div>
+      <div><b>Qué cambia</b><span>Un equipo local y responsable se hace cargo de ventas, ejecución del piloto y soporte de largo plazo, a tu nombre.</span></div>
+      <div><b>Dónde estamos</b><span>Santiago, Chile — dentro del mercado minero más grande de la región, cerca de las faenas.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Cómo funciona un proyecto</div>
+      <h2>De la primera venta al contrato renovado.</h2>
+      <p>Tres etapas, un solo socio responsable. Abre cada una para ver qué hacemos en concreto.</p>
+    </div>
+    <div class="pipeline">
+      <div class="pipeline-track" id="pipeline-track">
+        <div class="stage open" data-stage="1">
+          <div class="stage-fill" style="width:100%"></div>
+          <div class="stage-dot"></div>
+          <div class="stage-index">ETAPA 1</div>
+          <h3>Desarrollo de negocios</h3>
+          <div class="stage-teaser">Encontrar y cerrar tus primeros clientes en Latinoamérica.</div>
+          <div class="stage-detail">
+            <ul>
+              <li>Desarrollo de ventas B2B dedicado, que conecta tu solución directamente con operadores mineros a través de discovery de clientes y segmentación de mercado.</li>
+              <li>Un plan de entrada al mercado hecho a medida, según cómo compran tecnología las mineras latinoamericanas.</li>
+              <li>Selección y supervisión de distribuidores, integradores y agentes para ampliar tu alcance más allá de lo que cubre un equipo directo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="stage" data-stage="2">
+          <div class="stage-fill"></div>
+          <div class="stage-dot"></div>
+          <div class="stage-index">ETAPA 2</div>
+          <h3>Gestión de proyectos</h3>
+          <div class="stage-teaser">Llevar el piloto a terreno y demostrar que funciona.</div>
+          <div class="stage-detail">
+            <ul>
+              <li>Diseño, ejecución y validación de métricas de pruebas de concepto (POC) y proyectos piloto en terreno.</li>
+              <li>Logística de despliegue para operaciones remotas y de altura, donde el cumplimiento normativo y el conocimiento local definen si un piloto llega a tiempo.</li>
+              <li>Cada faena y cada cliente son distintos — planificamos en torno a eso, no a una plantilla.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="stage" data-stage="3">
+          <div class="stage-fill"></div>
+          <div class="stage-dot"></div>
+          <div class="stage-index">ETAPA 3</div>
+          <h3>Éxito del cliente</h3>
+          <div class="stage-teaser">Mantener la tecnología adoptada, renovada y en expansión.</div>
+          <div class="stage-detail">
+            <ul>
+              <li>Soporte Tier 1 y Tier 2 con personal de habla hispana y portuguesa, en el mismo huso horario que la faena.</li>
+              <li>Gestión del cambio operacional: capacitamos a operadores, ingenieros y superintendentes para lograr adopción real, no solo instalación.</li>
+              <li>Gestión continua de éxito del cliente que impulsa renovaciones, upgrades de contrato y expansión entre faenas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="region">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Por qué la región</div>
+      <h2>El cinturón minero de Latinoamérica va del Atacama a los Andes.</h2>
+      <p>Estamos posicionados dentro de él, no asesorando desde afuera. Pasa el mouse por el mapa para ver dónde se concentran los despliegues.</p>
+    </div>
+    <div class="region-grid">
+      <div class="map-box">
+        <svg id="region-svg" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg">
+          <g id="region-tris"></g>
+          <g id="region-markers"></g>
+        </svg>
+        <div class="region-tip" id="region-tip"><b>Pasa el mouse por un punto</b>Zonas mineras clave donde trabajan los equipos de BlueAtom.</div>
+      </div>
+      <div class="region-facts">
+        <div class="fact"><b>25+ años en la región</b><span>Relaciones con mineras, distribuidores y reguladores construidas durante décadas, no en un solo ciclo de venta.</span></div>
+        <div class="fact"><b>Bilingüe, mismo huso horario</b><span>Soporte en español y portugués que responde en el horario de la faena, no de madrugada desde otro continente.</span></div>
+        <div class="fact"><b>Listos para altura y terreno remoto</b><span>Logística operacional y conocimiento normativo para despliegues donde la ciudad más cercana está a horas de distancia.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" style="padding-top:64px;">
+  <div class="wrap">
+    <div class="eyebrow">También disponible</div>
+    <h2 style="font-size:24px;">Capacitación, incluida en cada proyecto.</h2>
+    <div class="recap-grid">
+      <div class="recap-item"><b>Desarrollo de negocios</b><span>Ventas, entrada al mercado y socios de canal.</span></div>
+      <div class="recap-item"><b>Gestión de proyectos</b><span>Diseño de POC y despliegue en terreno remoto.</span></div>
+      <div class="recap-item"><b>Éxito del cliente</b><span>Soporte bilingüe y renovaciones.</span></div>
+      <div class="recap-item"><b>Capacitación</b><span>Habilitación de operadores e ingenieros, en terreno.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>¿Estás llevando tu tecnología a la minería latinoamericana?</h2>
+      <p>Cuéntanos qué construiste y dónde quieres que funcione. Te decimos qué se necesita para tener un piloto en terreno.</p>
+    </div>
+    <div class="titleblock">
+      <div class="tb-row"><div class="tb-label">Empresa</div><div class="tb-value">BlueAtom</div></div>
+      <div class="tb-row"><div class="tb-label">Ubicación</div><div class="tb-value">Santiago, Chile</div></div>
+      <div class="tb-row"><div class="tb-label">Correo</div><div class="tb-value"><a href="mailto:info@blueatom.cl">info@blueatom.cl</a></div></div>
+      <div class="tb-row"><div class="tb-label">Enfoque</div><div class="tb-value">Proveedores METS, entrada a LatAm</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 BlueAtom.</span>
+    <span>Santiago, Chile</span>
+  </div>
+</footer>
+
+<script>
+  // ---------- seeded random ----------
+  function mulberry32(a){
+    return function(){
+      a|=0;a=a+0x6D2B79F5|0;
+      let t=Math.imul(a^a>>>15,1|a);
+      t=t+Math.imul(t^t>>>7,61|t)^t;
+      return ((t^t>>>14)>>>0)/4294967296;
+    }
+  }
+  function pointInPolygon(x,y,poly){
+    let inside=false;
+    for(let i=0,j=poly.length-1;i<poly.length;j=i++){
+      const xi=poly[i][0],yi=poly[i][1],xj=poly[j][0],yj=poly[j][1];
+      const intersect=((yi>y)!==(yj>y)) && (x < (xj-xi)*(y-yi)/(yj-yi)+xi);
+      if(intersect) inside=!inside;
+    }
+    return inside;
+  }
+  function renderLowPoly(groupId, poly, opts){
+    const g = document.getElementById(groupId);
+    const rand = mulberry32(opts.seed || 7);
+    const cell = opts.cell;
+    const jitter = cell*0.35;
+    let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+    poly.forEach(p=>{minX=Math.min(minX,p[0]);minY=Math.min(minY,p[1]);maxX=Math.max(maxX,p[0]);maxY=Math.max(maxY,p[1]);});
+    minX-=cell;minY-=cell;maxX+=cell;maxY+=cell;
+    const cols = Math.ceil((maxX-minX)/cell)+1;
+    const rows = Math.ceil((maxY-minY)/cell)+1;
+    const pts = [];
+    for(let r=0;r<=rows;r++){
+      pts.push([]);
+      for(let c=0;c<=cols;c++){
+        const bx = minX+c*cell, by = minY+r*cell;
+        pts[r].push([bx+(rand()-0.5)*jitter, by+(rand()-0.5)*jitter]);
+      }
+    }
+    let html='';
+    for(let r=0;r<rows;r++){
+      for(let c=0;c<cols;c++){
+        const p00=pts[r][c],p10=pts[r][c+1],p01=pts[r+1][c],p11=pts[r+1][c+1];
+        [[p00,p10,p01],[p10,p11,p01]].forEach(tri=>{
+          const cx=(tri[0][0]+tri[1][0]+tri[2][0])/3;
+          const cy=(tri[0][1]+tri[1][1]+tri[2][1])/3;
+          if(pointInPolygon(cx,cy,poly)){
+            const op=(0.10+rand()*0.24).toFixed(2);
+            html += '<polygon class="tri" fill-opacity="'+op+'" points="'+tri.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')+'"></polygon>';
+          }
+        });
+      }
+    }
+    g.innerHTML = html;
+  }
+
+  // rough Latin America silhouette (Central America -> South America), viewBox 0 0 600 900
+  const CONTINENT = [
+    [70,20],[110,55],[135,95],[118,140],[150,175],[148,215],[185,245],
+    [225,285],[205,330],[255,365],[315,330],[378,360],[430,410],
+    [462,475],[432,535],[402,595],[372,645],[342,695],[320,745],
+    [300,795],[280,845],[258,878],[236,818],[224,758],[212,698],
+    [200,638],[190,578],[180,518],[170,458],[160,398],[150,338],
+    [140,278],[132,218],[112,168],[92,120]
+  ];
+  // small caribbean island accents
+  const ISLANDS = [
+    [[420,70],[460,60],[470,90],[430,95]],
+    [[480,95],[515,88],[520,110],[485,115]]
+  ];
+
+  renderLowPoly('hero-tris', CONTINENT, {cell:46, seed:11});
+  ISLANDS.forEach((isl,i)=>{
+    const g=document.getElementById('hero-tris');
+    const op=(0.12+i*0.05).toFixed(2);
+    g.innerHTML += '<polygon class="tri" fill-opacity="'+op+'" points="'+isl.map(p=>p[0]+','+p[1]).join(' ')+'"></polygon>';
+  });
+
+  // smaller region map (rescaled continent into 320x420 box)
+  const REGION_POLY = CONTINENT.map(p=>[ (p[0]-60)/(470-60)*300+10, p[1]/900*400+10 ]);
+  renderLowPoly('region-tris', REGION_POLY, {cell:20, seed:23});
+
+  // ---------- Pipeline accordion ----------
+  (function(){
+    const stages = document.querySelectorAll('.stage');
+    stages.forEach(stage=>{
+      stage.addEventListener('click', ()=>{
+        stages.forEach(s=>{ if(s!==stage){ s.classList.remove('open'); s.querySelector('.stage-fill').style.width='0%'; } });
+        const willOpen = !stage.classList.contains('open');
+        stage.classList.toggle('open', willOpen);
+        stage.querySelector('.stage-fill').style.width = willOpen ? '100%' : '0%';
+      });
+    });
+  })();
+
+  // ---------- Region markers ----------
+  (function(){
+    const markers = [
+      {x:150, y:150, label:'Antofagasta, CL', note:'Corazón del cobre — operaciones en el desierto de Atacama y faenas de altura.'},
+      {x:160, y:230, label:'Santiago, CL', note:'Base de BlueAtom — sede regional y centro de soporte.'},
+      {x:118, y:95,  label:'Arequipa, PE', note:'Cinturón cuprífero del sur de Perú, zona frecuente de despliegue de pilotos.'},
+      {x:190, y:320, label:'Corredor Sur, CL', note:'Corredor de logística y soporte en terreno para operaciones australes.'}
+    ];
+    const g = document.getElementById('region-markers');
+    const tip = document.getElementById('region-tip');
+    markers.forEach(m=>{
+      const el = document.createElementNS('http://www.w3.org/2000/svg','g');
+      el.setAttribute('class','site-marker');
+      el.innerHTML = '<circle cx="'+m.x+'" cy="'+m.y+'" r="4.5"></circle><text x="'+(m.x+9)+'" y="'+(m.y+3)+'">'+m.label+'</text>';
+      el.addEventListener('mouseenter', ()=>{
+        document.querySelectorAll('.site-marker').forEach(s=>s.classList.remove('active'));
+        el.classList.add('active');
+        tip.innerHTML = '<b>'+m.label+'</b>'+m.note;
+      });
+      g.appendChild(el);
+    });
+  })();
+
+  // ---------- Count-up stats ----------
+  (function(){
+    const nums = document.querySelectorAll('.stat-num');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const el = entry.target;
+          const target = parseInt(el.dataset.count,10);
+          if(reduce){ el.textContent = target; obs.unobserve(el); return; }
+          let cur = 0;
+          const step = Math.max(1, Math.round(target/24));
+          const tick = ()=>{ cur=Math.min(target,cur+step); el.textContent=cur; if(cur<target) requestAnimationFrame(tick); };
+          tick();
+          obs.unobserve(el);
+        }
+      });
+    }, {threshold:0.4});
+    nums.forEach(n=>obs.observe(n));
+  })();
+
+  // ---------- Active nav link on scroll ----------
+  (function(){
+    const links = document.querySelectorAll('.nav-links a');
+    const sections = Array.from(links).map(l=>document.querySelector(l.getAttribute('href')));
+    window.addEventListener('scroll', ()=>{
+      let idx = 0;
+      sections.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top < 140) idx = i; });
+      links.forEach(l=>l.classList.remove('active'));
+      links[idx].classList.add('active');
+    });
+  })();
+</script>
+</body>
+</html>
