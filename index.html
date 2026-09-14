@@ -5,6 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BlueAtom — Mining technology, deployed across Latin America</title>
 <meta name="description" content="BlueAtom helps international mining technology vendors enter and grow in Latin America: business development, project management, and customer success.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Cpath d='M14,58 A32,32 0 1 1 66,58' fill='none' stroke='%231d4e9b' stroke-width='9' stroke-linecap='round'/%3E%3Cline x1='40' y1='40' x2='40' y2='10' stroke='%231d4e9b' stroke-width='8' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='10' r='9' fill='%231d4e9b'/%3E%3Ccircle cx='14' cy='58' r='9' fill='%231d4e9b'/%3E%3Ccircle cx='66' cy='58' r='9' fill='%231d4e9b'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BlueAtom">
+<meta property="og:title" content="BlueAtom — Mining technology, deployed across Latin America">
+<meta property="og:description" content="BlueAtom helps international mining technology vendors enter and grow in Latin America: business development, project management, and customer success.">
+<meta property="og:url" content="https://www.blueatom.cl/">
+<meta property="og:image" content="https://www.blueatom.cl/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BlueAtom — Mining technology, deployed across Latin America">
+<meta name="twitter:description" content="Business development, project management, and customer success for METS vendors entering Latin America's mining industry.">
+<meta name="twitter:image" content="https://www.blueatom.cl/og-image.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BlueAtom",
+  "url": "https://www.blueatom.cl/",
+  "logo": "https://www.blueatom.cl/og-image.svg",
+  "description": "BlueAtom specializes in business development and customer success for METS vendors in Latin America's mining sector.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Santiago", "addressCountry": "CL" },
+  "contactPoint": { "@type": "ContactPoint", "email": "info@blueatom.cl", "contactType": "sales" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -157,7 +182,64 @@
   .tb-value a{text-decoration:none;color:var(--orange);}
 
   footer{background:#fff;border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--ink-dim);}
-  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;}
+  .footer-links{display:flex;gap:18px;flex-wrap:wrap;}
+  .footer-links a{text-decoration:none;color:var(--ink-dim);}
+  .footer-links a:hover{color:var(--blue-700);}
+
+  /* ---------- TRUSTBAR ---------- */
+  .trustbar{padding:34px 0;border-bottom:1px solid var(--line);}
+  .trustbar-label{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);text-align:center;margin-bottom:18px;letter-spacing:0.04em;}
+  .trustbar-logos{display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap;}
+  .trustbar-logos span{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14.5px;color:var(--line-strong);letter-spacing:0.03em;}
+
+  /* ---------- PROOF / CASE STUDY ---------- */
+  .proof-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;margin-top:44px;align-items:start;}
+  @media (max-width:860px){.proof-grid{grid-template-columns:1fr;gap:30px;}}
+  .proof-quote{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(18px,2.4vw,24px);line-height:1.5;color:var(--ink);border-left:3px solid var(--orange);padding-left:22px;margin:0;}
+  .proof-quote cite{display:block;margin-top:18px;font-family:'IBM Plex Sans',sans-serif;font-style:normal;font-size:13.5px;color:var(--ink-dim);}
+  .proof-stats{display:flex;flex-direction:column;gap:20px;}
+  .proof-stats div{border-top:1px solid var(--line);padding-top:12px;}
+  .proof-stats b{display:block;font-family:'Space Grotesk',sans-serif;font-size:26px;color:var(--blue-700);}
+  .proof-stats span{font-size:13px;color:var(--ink-dim);}
+
+  /* ---------- TEAM ---------- */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;}
+  @media (max-width:700px){.team-grid{grid-template-columns:1fr;}}
+  .team-card{text-align:center;padding:28px 18px;border:1px solid var(--line);border-radius:3px;}
+  .avatar{width:56px;height:56px;border-radius:50%;background:var(--blue-700);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;margin:0 auto 14px;}
+  .team-card b{display:block;font-family:'Space Grotesk',sans-serif;font-size:15.5px;margin-bottom:4px;}
+  .team-card span{font-size:13px;color:var(--ink-dim);}
+
+  /* ---------- CONTACT FORM ---------- */
+  .contact-form{margin-top:28px;display:flex;flex-direction:column;gap:14px;max-width:420px;}
+  .contact-form[hidden]{display:none;}
+  .contact-form label{font-size:13px;color:#b9c6de;display:flex;flex-direction:column;gap:6px;}
+  .contact-form input,.contact-form textarea{font-family:inherit;font-size:14px;padding:10px 12px;border-radius:3px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.06);color:#fff;resize:vertical;}
+  .contact-form input::placeholder,.contact-form textarea::placeholder{color:#7c8fb0;}
+  .contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--orange);outline-offset:1px;}
+  .contact-form .btn-primary{align-self:flex-start;border:none;cursor:pointer;font-family:inherit;}
+  .form-note{font-size:11.5px;color:#7c8fb0;margin:0;}
+  .form-success{display:none;color:#8fe3a8;font-size:14.5px;margin-top:16px;font-family:'Space Grotesk',sans-serif;}
+
+  /* ---------- COOKIE BANNER ---------- */
+  .cookie-banner{position:fixed;left:20px;bottom:20px;max-width:330px;background:#fff;border:1px solid var(--line-strong);border-radius:6px;box-shadow:0 10px 30px rgba(20,28,40,0.18);padding:18px 20px;z-index:100;font-size:13.5px;color:var(--ink-dim);}
+  .cookie-banner[hidden]{display:none;}
+  .cookie-banner p{margin:0 0 12px;}
+  .cookie-banner a{color:var(--blue-700);}
+  .cookie-actions{display:flex;gap:10px;}
+  .cookie-btn{font-size:13px;padding:8px 14px;border-radius:3px;border:1px solid var(--line-strong);background:#fff;cursor:pointer;font-family:inherit;}
+  .cookie-accept{background:var(--blue-700);color:#fff;border-color:var(--blue-700);}
+  .cookie-accept:hover{background:var(--blue-800);}
+  .cookie-decline:hover{background:var(--bg-alt);}
+
+  /* ---------- LEGAL MODAL ---------- */
+  .modal-overlay{position:fixed;inset:0;background:rgba(15,20,30,0.5);display:flex;align-items:center;justify-content:center;z-index:200;padding:20px;}
+  .modal-overlay[hidden]{display:none;}
+  .modal-box{background:#fff;max-width:480px;width:100%;padding:30px;border-radius:4px;max-height:80vh;overflow:auto;}
+  .modal-box h3{font-size:19px;margin-bottom:14px;}
+  .modal-box p{font-size:14px;color:var(--ink-dim);margin-bottom:10px;}
+  .modal-close{margin-top:10px;background:var(--blue-700);color:#fff;border:none;padding:10px 18px;border-radius:3px;cursor:pointer;font-size:14px;font-family:inherit;}
 </style>
 </head>
 <body>
@@ -202,6 +284,19 @@
     </div>
   </div>
 </header>
+
+<section class="trustbar">
+  <div class="wrap">
+    <div class="trustbar-label">Illustrative technology partners — demo names</div>
+    <div class="trustbar-logos">
+      <span>AURUM DRONES</span>
+      <span>NORTIC SENSORS</span>
+      <span>VANTAGE ROBOTICS</span>
+      <span>HELION SYSTEMS</span>
+      <span>PETRAVOX</span>
+    </div>
+  </div>
+</section>
 
 <section id="approach">
   <div class="wrap">
@@ -271,6 +366,24 @@
   </div>
 </section>
 
+<section id="proof">
+  <div class="wrap">
+    <div class="eyebrow">Illustrative case study — demo content</div>
+    <h2 style="font-size:24px;">What a finished engagement looks like.</h2>
+    <div class="proof-grid">
+      <blockquote class="proof-quote">
+        "BlueAtom took us from a cold intro to a six-site rollout in fourteen months. They ran point on every permit, every training session, and every renewal conversation — we just kept building the product."
+        <cite>— Elena Marsh, VP International Sales, Aurum Drones (fictional, for illustration)</cite>
+      </blockquote>
+      <div class="proof-stats">
+        <div><b>14</b><span>months from first meeting to 6-site rollout</span></div>
+        <div><b>3</b><span>countries deployed across</span></div>
+        <div><b>92%</b><span>pilot-to-contract conversion rate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="region">
   <div class="wrap">
     <div class="section-head">
@@ -308,11 +421,35 @@
   </div>
 </section>
 
+<section id="team">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Who's behind it — demo profiles</div>
+      <h2>A small team that's done this before.</h2>
+      <p>Placeholder profiles for this mockup — swap in your real team and photos.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><div class="avatar">MF</div><b>Marcela Fuentes</b><span>Business Development</span></div>
+      <div class="team-card"><div class="avatar">JR</div><b>Javier Rojas</b><span>Project Management</span></div>
+      <div class="team-card"><div class="avatar">CS</div><b>Carla Silva</b><span>Customer Success</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="wrap contact-grid">
     <div>
       <h2>Bringing your technology to Latin American mining?</h2>
       <p>Tell us what you built and where you want it to work. We'll tell you what it takes to get a pilot on site.</p>
+      <form class="contact-form" id="contact-form">
+        <label>Name<input type="text" name="name" placeholder="Jane Smith" required></label>
+        <label>Company<input type="text" name="company" placeholder="Your company"></label>
+        <label>Email<input type="email" name="email" placeholder="jane@company.com" required></label>
+        <label>Message<textarea name="message" rows="3" placeholder="What are you building, and where?"></textarea></label>
+        <button type="submit" class="btn-primary">Send message</button>
+        <p class="form-note">Demo form — nothing is sent or stored, this is just for show.</p>
+      </form>
+      <p class="form-success" id="form-success">Thanks! In a real deployment this would reach our team — for now, this is just a demo.</p>
     </div>
     <div class="titleblock">
       <div class="tb-row"><div class="tb-label">Company</div><div class="tb-value">BlueAtom</div></div>
@@ -326,9 +463,30 @@
 <footer>
   <div class="wrap footer-inner">
     <span>© 2026 BlueAtom.</span>
+    <div class="footer-links">
+      <a href="#" id="footer-privacy">Privacy Policy</a>
+      <a href="#" id="footer-terms">Terms</a>
+      <a href="#" id="footer-cookie-prefs">Cookie preferences</a>
+    </div>
     <span>Santiago, Chile</span>
   </div>
 </footer>
+
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <p>We use cookies to improve your experience on this site (demo banner — no cookies are actually set). <a href="#" id="footer-privacy-2">Learn more</a></p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-btn cookie-accept" id="cookie-accept">Accept</button>
+    <button type="button" class="cookie-btn cookie-decline" id="cookie-decline">Decline</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="legal-modal" hidden>
+  <div class="modal-box">
+    <h3 id="legal-modal-title">Privacy Policy</h3>
+    <p id="legal-modal-body"></p>
+    <button type="button" class="modal-close" id="legal-modal-close">Close</button>
+  </div>
+</div>
 
 <script>
   // ---------- seeded random ----------
@@ -468,11 +626,13 @@
       const el = document.createElementNS('http://www.w3.org/2000/svg','g');
       el.setAttribute('class','site-marker');
       el.innerHTML = '<circle cx="'+m.x.toFixed(1)+'" cy="'+m.y.toFixed(1)+'" r="4.5"></circle><text x="'+(m.x+9).toFixed(1)+'" y="'+(m.y+3).toFixed(1)+'">'+m.label+'</text>';
-      el.addEventListener('mouseenter', ()=>{
+      const activate = ()=>{
         document.querySelectorAll('.site-marker').forEach(s=>s.classList.remove('active'));
         el.classList.add('active');
         tip.innerHTML = '<b>'+m.label+'</b>'+m.note;
-      });
+      };
+      el.addEventListener('mouseenter', activate);
+      el.addEventListener('click', activate);
       g.appendChild(el);
     });
   })();
@@ -507,6 +667,64 @@
       sections.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top < 140) idx = i; });
       links.forEach(l=>l.classList.remove('active'));
       links[idx].classList.add('active');
+    });
+  })();
+
+  // ---------- Cookie banner (demo — localStorage only, no real cookies set) ----------
+  (function(){
+    const banner = document.getElementById('cookie-banner');
+    const KEY = 'ba_cookie_consent_demo';
+    function show(){ banner.hidden = false; }
+    function hide(){ banner.hidden = true; }
+    try{
+      if(!localStorage.getItem(KEY)){ setTimeout(show, 900); }
+    }catch(e){ setTimeout(show, 900); }
+    document.getElementById('cookie-accept').addEventListener('click', ()=>{
+      try{ localStorage.setItem(KEY,'accepted'); }catch(e){}
+      hide();
+    });
+    document.getElementById('cookie-decline').addEventListener('click', ()=>{
+      try{ localStorage.setItem(KEY,'declined'); }catch(e){}
+      hide();
+    });
+    document.getElementById('footer-cookie-prefs').addEventListener('click', (e)=>{ e.preventDefault(); show(); });
+  })();
+
+  // ---------- Legal modal (demo placeholder text) ----------
+  (function(){
+    const overlay = document.getElementById('legal-modal');
+    const title = document.getElementById('legal-modal-title');
+    const body = document.getElementById('legal-modal-body');
+    const DOCS = {
+      privacy: {
+        title: 'Privacy Policy (demo)',
+        body: 'This is placeholder text for a demo privacy policy. In a real deployment, this page would describe what data BlueAtom collects, how it is used, and how visitors can request access or deletion.'
+      },
+      terms: {
+        title: 'Terms of Service (demo)',
+        body: 'This is placeholder text for demo terms of service. In a real deployment, this page would cover the terms under which visitors use the BlueAtom site and engage BlueAtom services.'
+      }
+    };
+    function open(key){
+      title.textContent = DOCS[key].title;
+      body.textContent = DOCS[key].body;
+      overlay.hidden = false;
+    }
+    document.getElementById('footer-privacy').addEventListener('click', e=>{ e.preventDefault(); open('privacy'); });
+    document.getElementById('footer-privacy-2').addEventListener('click', e=>{ e.preventDefault(); open('privacy'); });
+    document.getElementById('footer-terms').addEventListener('click', e=>{ e.preventDefault(); open('terms'); });
+    overlay.addEventListener('click', e=>{ if(e.target===overlay) overlay.hidden = true; });
+    document.getElementById('legal-modal-close').addEventListener('click', ()=>{ overlay.hidden = true; });
+  })();
+
+  // ---------- Contact form (demo — no data is sent anywhere) ----------
+  (function(){
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      form.hidden = true;
+      success.style.display = 'block';
     });
   })();
 </script>
